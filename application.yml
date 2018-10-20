@@ -1,13 +1,15 @@
-server: 
-  port: 3344 
-  
-spring:
-  application:
-    name:  microservicecloud-config
-  cloud:
-    config:
-      server:
-        git:
-          uri: git@github.com:selfconfidence/microservicecloud-config.git #GitHub上面的git仓库名字
- 
+﻿spring:
+  profiles:
+   active
+    - dev
+---
+spring:    #开发环境
+ profiles: dev
+ application:
+  name: microservicecloud-config-dev
 
+---
+spring:        #测试环境
+ profiles: test
+ application:
+  name: microservicecloud-config-test
