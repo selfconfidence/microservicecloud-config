@@ -9,10 +9,6 @@ spring:    #开发环境
  profiles: dev
   application:
    name: microservicecloud-config-client
-eureka:
- client:
-  service-url:
-   defaultZone: http://localhost:7001/eureka/
 ---
 server:
  port: 8202
@@ -20,7 +16,3 @@ spring:    #开发环境
  profiles: test
   application:
   name: microservicecloud-config-client
-eureka:
- client:
-  service-url:
-   defaultZone: http://localhost:7001/eureka/
